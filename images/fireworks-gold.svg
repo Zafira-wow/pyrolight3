@@ -1,0 +1,23 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" rx="28" fill="#1f0e04"/>
+  <circle cx="400" cy="260" r="150" fill="url(#glow)"/>
+  <g transform="translate(400 260)">
+    <circle r="32" fill="#ffd166"/>
+    <circle r="20" fill="#fff6bf" opacity="0.95"/>
+    <path d="M0,-95 L9,-20 L0,-42 L-9,-20 Z" fill="#ffb703"/>
+    <path d="M0,95 L9,20 L0,42 L-9,20 Z" fill="#ffb703"/>
+    <path d="M-95,0 L-20,9 L-42,0 L-20,-9 Z" fill="#ff8d1a"/>
+    <path d="M95,0 L20,9 L42,0 L20,-9 Z" fill="#ff8d1a"/>
+    <path d="M-70,-70 L-15,-15 L-28,-28 L-8,-8 Z" fill="#ffe08a"/>
+    <path d="M70,-70 L15,-15 L28,-28 L8,-8 Z" fill="#ffe08a"/>
+    <path d="M-70,70 L-15,15 L-28,28 L-8,8 Z" fill="#ffe08a"/>
+    <path d="M70,70 L15,15 L28,28 L8,8 Z" fill="#ffe08a"/>
+  </g>
+  <defs>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(400 260) rotate(90) scale(150 150)">
+      <stop offset="0%" stop-color="#7c2d12"/>
+      <stop offset="45%" stop-color="#3b1507"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </radialGradient>
+  </defs>
+</svg>

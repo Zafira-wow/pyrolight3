@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480">
+  <rect width="640" height="480" rx="36" fill="#fff7f2"/>
+  <rect x="140" y="130" width="360" height="220" rx="24" fill="#d93b2f" stroke="#7f1e14" stroke-width="10"/>
+  <rect x="170" y="96" width="300" height="60" rx="14" fill="#7f1e14"/>
+  <rect x="170" y="96" width="300" height="60" rx="14" fill="#ff5d45" opacity="0.9"/>
+  <rect x="232" y="162" width="176" height="110" rx="16" fill="#ffe7de"/>
+  <rect x="250" y="178" width="140" height="22" rx="8" fill="#d93b2f" opacity="0.75"/>
+  <rect x="250" y="212" width="140" height="22" rx="8" fill="#d93b2f" opacity="0.75"/>
+  <rect x="250" y="246" width="140" height="22" rx="8" fill="#d93b2f" opacity="0.75"/>
+  <rect x="212" y="322" width="216" height="24" rx="12" fill="#d93b2f" opacity="0.35"/>
+  <text x="320" y="390" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700" fill="#a42317">Red Box</text>
+</svg>
