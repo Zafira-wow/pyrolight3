@@ -18,7 +18,14 @@ function applyTheme(theme) {
 function getInitialTheme() {
   try {
     const savedTheme = localStorage.getItem('pyrolight-theme');
-    if (savedTheme) return savedTheme;
+    if (savedTheme) {
+      // Only accept known, supported themes. Map removed/legacy themes to the current default.
+      const allowed = ['classic', 'festive', 'fourth'];
+      if (allowed.includes(savedTheme)) return savedTheme;
+      // Map legacy 'third' (removed) to 'fourth' and persist the change.
+      try { localStorage.setItem('pyrolight-theme', 'fourth'); } catch (e) {}
+      return 'fourth';
+    }
   } catch (e) {
     // ignore
   }
