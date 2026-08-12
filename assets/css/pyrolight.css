@@ -450,7 +450,7 @@ main {
 
 .modal-card {
   width: min(560px, 100%);
-  background: #8ac59c;
+  background: #bcf1cd;
   border: 1px solid var(--border);
   border-radius: 20px;
   padding: 24px;
