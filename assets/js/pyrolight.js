@@ -5,52 +5,30 @@ const productForm = document.getElementById('product-form');
 const productGrid = document.getElementById('product-grid');
 const showGrid = document.getElementById('show-grid');
 const galleryGrid = document.getElementById('gallery-grid');
-const themeButtons = document.querySelectorAll('.theme-option');
-const isMultipagePage = window.location.pathname.toLowerCase().includes('multipage.html');
-
 function applyTheme(theme) {
   document.body.classList.remove('theme-classic', 'theme-festive', 'theme-third', 'theme-fourth');
   document.body.classList.add(`theme-${theme}`);
-  localStorage.setItem('pyrolight-theme', theme);
-
-  themeButtons.forEach((button) => {
-    button.classList.toggle('active', button.dataset.theme === theme);
-  });
+  try {
+    localStorage.setItem('pyrolight-theme', theme);
+  } catch (e) {
+    // Ignore storage errors (e.g., incognito)
+  }
 }
 
 function getInitialTheme() {
-  const savedTheme = localStorage.getItem('pyrolight-theme');
-
-  if (isMultipagePage) {
-    return 'fourth';
+  try {
+    const savedTheme = localStorage.getItem('pyrolight-theme');
+    if (savedTheme) return savedTheme;
+  } catch (e) {
+    // ignore
   }
 
-  if (savedTheme && savedTheme !== 'fourth') {
-    return savedTheme;
-  }
-
+  // If body already has a theme class, respect it; otherwise default to 'classic'
+  if (document.body.classList.contains('theme-fourth')) return 'fourth';
   return 'classic';
 }
 
 applyTheme(getInitialTheme());
-
-themeButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const theme = button.dataset.theme;
-
-    if (theme === 'fourth' && button.dataset.page) {
-      if (isMultipagePage) {
-        applyTheme('fourth');
-        return;
-      }
-
-      window.location.href = button.dataset.page;
-      return;
-    }
-
-    applyTheme(theme);
-  });
-});
 
 function openModal() {
   modal.classList.remove('hidden');

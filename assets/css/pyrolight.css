@@ -9,43 +9,6 @@
   --accent-2: #ffcd3c;
   --border: rgba(255, 255, 255, 0.1);
 }
-
-body.theme-classic {
-  color-scheme: dark;
-  --bg: #05070b;
-  --bg-soft: #101722;
-  --card: #161d2a;
-  --text: #f8f6ef;
-  --muted: #b3b8c2;
-  --accent: #ff7a1a;
-  --accent-2: #ffcd3c;
-  --border: rgba(255, 255, 255, 0.1);
-}
-
-body.theme-festive {
-  color-scheme: light;
-  --bg: #fff8ee;
-  --bg-soft: #ffe8c8;
-  --card: #fffdf8;
-  --text: #342011;
-  --muted: #74513d;
-  --accent: #d9480f;
-  --accent-2: #f08c00;
-  --border: rgba(77, 33, 10, 0.14);
-}
-
-body.theme-third {
-  color-scheme: light;
-  --bg: #f4f8ff;
-  --bg-soft: #dce9ff;
-  --card: #ffffff;
-  --text: #17233d;
-  --muted: #5c6b7c;
-  --accent: #4c6ef5;
-  --accent-2: #2b6cb0;
-  --border: rgba(23, 35, 61, 0.12);
-}
-
 body.theme-fourth {
   color-scheme: light;
   --bg: #f7efe2;
@@ -297,7 +260,7 @@ main {
   padding: 28px;
   border: 1px solid var(--border);
   border-radius: 24px;
-  background: rgba(10, 15, 22, 0.7);
+  background: rgba(130, 162, 209, 0.7);
   backdrop-filter: blur(8px);
 }
 
@@ -527,7 +490,7 @@ body.theme-third .alert {
 
 .modal-card {
   width: min(560px, 100%);
-  background: #101722;
+  background: #8ac59c;
   border: 1px solid var(--border);
   border-radius: 20px;
   padding: 24px;

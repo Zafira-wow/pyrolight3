@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pyrolight | Produkty</title>
+    <meta name="description" content="Výber ohňostrojových zostáv a boxov – od menších rodinných balíčkov po veľké eventy. Prehľad cien a odporúčaní." />
     <link rel="stylesheet" href="assets/css/pyrolight.css?v=3" />
   </head>
   <body class="theme-fourth">
@@ -11,7 +12,7 @@
       <nav class="top-nav">
         <a class="brand" href="index.html">Pyrolight</a>
         <div class="nav-links">
-          <a href="multipage.html">Úvod</a>
+          <a href="index.html">Úvod</a>
           <a href="produkty.html">Produkty</a>
           <a href="show.html">Show</a>
           <a href="galeria.html">Galéria</a>
@@ -19,14 +20,14 @@
           <a href="kontakt.html">Kontakt</a>
         </div>
         <div class="nav-actions">
-          <a class="btn secondary" href="index.html">Späť na hlavné</a>
+          <button id="toggle-admin" class="admin-btn" type="button">Pridať produkt</button>
         </div>
       </nav>
 
       <div class="hero-content">
         <p class="eyebrow">Produkty</p>
-        <h1>Vyber si z našich ohňostrojových boxov</h1>
-        <p>Na tejto stránke sú zobrazené produkty samostatne, bez zvyčajného jedného panela.</p>
+        <h1>Zostavy a balíčky pre každú príležitosť</h1>
+        <p>Prehľadne zobrazujeme naše zostavy: od pokojnej rodinnej šou až po energetické panoramatické efekty.</p>
       </div>
     </header>
 
@@ -40,7 +41,7 @@
             </div>
             <div class="card-body">
               <h3>Novoročný box</h3>
-              <p>Elegantné farebné explózie pre oslavu prichádzajúceho roka.</p>
+              <p>Komplexná zostava pre oslavy do nového roka — efekty s dôrazom na bezpečnosť a vizuálny dojem.</p>
               <div class="card-meta">
                 <span class="price">€ 89</span>
                 <span class="tag">Najpredávanejšie</span>
@@ -53,8 +54,8 @@
               <img class="explosion-image" src="images/firework-explosion-gold.svg" alt="Explózia birthday sparkle" />
             </div>
             <div class="card-body">
-              <h3>Birthday sparkle</h3>
-              <p>Teplé a veselých farby pre narodeninové oslavy.</p>
+              <h3>Birthday Sparkle</h3>
+              <p>Jemnejšie efekty vhodné pre rodinné oslavy a menšie eventy.</p>
               <div class="card-meta">
                 <span class="price">€ 69</span>
                 <span class="tag">Pre rodinu</span>
@@ -68,7 +69,7 @@
             </div>
             <div class="card-body">
               <h3>Romantické svetlo</h3>
-              <p>Vhodné pre svadby, výročia a osobitné chvíle.</p>
+              <p>Elegantné zlaté a teplé tóny určené pre svadby a romantické chvíle.</p>
               <div class="card-meta">
                 <span class="price">€ 99</span>
                 <span class="tag">Svadobné</span>
@@ -106,6 +107,46 @@
         </div>
       </section>
     </main>
+
+    <div class="modal hidden" id="admin-modal" aria-hidden="true">
+      <div class="modal-card">
+        <h3>Pridať nový produkt</h3>
+        <form id="product-form">
+          <label>
+            Názov produktu
+            <input type="text" id="product-name" name="product-name" required />
+          </label>
+          <label>
+            Krátky popis
+            <textarea id="product-description" name="product-description" rows="3" required></textarea>
+          </label>
+          <label>
+            Cena
+            <input type="text" id="product-price" name="product-price" placeholder="€ 120" required />
+          </label>
+          <label>
+            Štítok
+            <input type="text" id="product-tag" name="product-tag" placeholder="Novinka" />
+          </label>
+          <label>
+            Obrázok (voliteľné)
+            <input type="file" id="product-image" name="product-image" accept="image/*" />
+          </label>
+          <label>
+            Kam pridať
+            <select id="product-target" name="product-target">
+              <option value="produkty">Produkty</option>
+              <option value="show">Show</option>
+              <option value="galeria">Galéria</option>
+            </select>
+          </label>
+          <div class="modal-actions">
+            <button class="btn primary" type="submit">Pridať produkt</button>
+            <button class="btn secondary" id="close-modal" type="button">Zrušiť</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <script src="assets/js/pyrolight.js?v=3"></script>
   </body>

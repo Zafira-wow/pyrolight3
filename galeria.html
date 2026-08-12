@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pyrolight | Galéria</title>
+    <meta name="description" content="Ukážky našich realizácií: fotografie a videá z vystúpení a zostáv. Inšpirácia pre vašu akciu." />
     <link rel="stylesheet" href="assets/css/pyrolight.css?v=3" />
   </head>
   <body class="theme-fourth">
@@ -11,7 +12,7 @@
       <nav class="top-nav">
         <a class="brand" href="index.html">Pyrolight</a>
         <div class="nav-links">
-          <a href="multipage.html">Úvod</a>
+          <a href="index.html">Úvod</a>
           <a href="produkty.html">Produkty</a>
           <a href="show.html">Show</a>
           <a href="galeria.html">Galéria</a>
@@ -19,14 +20,14 @@
           <a href="kontakt.html">Kontakt</a>
         </div>
         <div class="nav-actions">
-          <a class="btn secondary" href="index.html">Späť na hlavné</a>
+          <button id="toggle-admin" class="admin-btn" type="button">Pridať produkt</button>
         </div>
       </nav>
 
       <div class="hero-content">
         <p class="eyebrow">Galéria</p>
-        <h1>Príklady krásnych výbuchov a efektov</h1>
-        <p>Na tejto podstránke sú zobrazené fotografie a vizuálne príklady jednotlivých efektov.</p>
+        <h1>Ukážky našich prác</h1>
+        <p>Prehliadnite si fotografie a videá z reálnych realizácií, ktoré ilustrujú rozsah a štýl našich efektov.</p>
       </div>
     </header>
 
@@ -48,6 +49,46 @@
         </div>
       </section>
     </main>
+
+    <div class="modal hidden" id="admin-modal" aria-hidden="true">
+      <div class="modal-card">
+        <h3>Pridať nový produkt</h3>
+        <form id="product-form">
+          <label>
+            Názov produktu
+            <input type="text" id="product-name" name="product-name" required />
+          </label>
+          <label>
+            Krátky popis
+            <textarea id="product-description" name="product-description" rows="3" required></textarea>
+          </label>
+          <label>
+            Cena
+            <input type="text" id="product-price" name="product-price" placeholder="€ 120" required />
+          </label>
+          <label>
+            Štítok
+            <input type="text" id="product-tag" name="product-tag" placeholder="Novinka" />
+          </label>
+          <label>
+            Obrázok (voliteľné)
+            <input type="file" id="product-image" name="product-image" accept="image/*" />
+          </label>
+          <label>
+            Kam pridať
+            <select id="product-target" name="product-target">
+              <option value="produkty">Produkty</option>
+              <option value="show">Show</option>
+              <option value="galeria">Galéria</option>
+            </select>
+          </label>
+          <div class="modal-actions">
+            <button class="btn primary" type="submit">Pridať produkt</button>
+            <button class="btn secondary" id="close-modal" type="button">Zrušiť</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <script src="assets/js/pyrolight.js?v=3"></script>
   </body>
