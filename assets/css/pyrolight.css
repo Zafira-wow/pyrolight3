@@ -543,6 +543,18 @@ body.theme-fourth .btn.primary {
 }
 
 @media (max-width: 900px) {
+  .top-nav {
+    flex-direction: column;
+    border-radius: 24px;
+    padding: 18px 16px;
+    margin-bottom: 32px;
+  }
+
+  .nav-links,
+  .nav-actions {
+    justify-content: center;
+  }
+
   .card-grid,
   .gallery,
   .contact-grid {
@@ -551,10 +563,49 @@ body.theme-fourth .btn.primary {
 }
 
 @media (max-width: 680px) {
+  body {
+    text-rendering: optimizeLegibility;
+  }
+
+  .hero {
+    padding: 16px 16px 48px;
+  }
+
+  .theme-panel {
+    border-radius: 18px;
+    padding: 12px 14px;
+  }
+
   .top-nav,
   .section-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 10px 14px;
+    font-size: 0.92rem;
+  }
+
+  .nav-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-content {
+    padding-top: 28px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn,
+  .modal-actions .btn {
+    width: 100%;
   }
 
   .card-grid,
@@ -563,11 +614,51 @@ body.theme-fourth .btn.primary {
     grid-template-columns: 1fr;
   }
 
-  .hero {
-    padding: 16px 16px 48px;
+  .card,
+  .contact-card,
+  .gallery figure {
+    border-radius: 16px;
+  }
+
+  .card-meta {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .section {
-    padding: 20px;
+    padding: 20px 16px;
+    border-radius: 18px;
+  }
+
+  .modal-card {
+    padding: 18px 16px;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand {
+    letter-spacing: 0.08em;
+    font-size: 0.86rem;
+  }
+
+  .btn,
+  .theme-option,
+  .admin-btn {
+    padding: 11px 14px;
+    font-size: 0.95rem;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding-left: 14px;
+    padding-right: 14px;
   }
 }
